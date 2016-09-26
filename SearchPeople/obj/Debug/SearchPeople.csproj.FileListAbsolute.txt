@@ -52,3 +52,4 @@ C:\WebApps\SearchPeople\SearchPeople\bin\Microsoft.Owin.Security.Twitter.xml
 C:\WebApps\SearchPeople\SearchPeople\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\WebApps\SearchPeople\SearchPeople\obj\Debug\SearchPeople.dll
 C:\WebApps\SearchPeople\SearchPeople\obj\Debug\SearchPeople.pdb
+C:\WebApps\SearchPeople\SearchPeople\obj\Debug\SearchPeople.csprojResolveAssemblyReference.cache
