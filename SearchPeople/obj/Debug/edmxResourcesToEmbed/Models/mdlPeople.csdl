@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="people_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="people_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="people" EntityType="people_dbModel.person" />
+  </EntityContainer>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="iperson" />
+    </Key>
+    <Property Name="iperson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="last_name" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="sort_name" Type="String" MaxLength="160" FixedLength="true" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+    <Property Name="zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="interests" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pic_path" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+  </EntityType>
+</Schema>

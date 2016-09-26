@@ -1,0 +1,13 @@
+﻿.fixed-ratio-resize{
+    width: 95%;
+    height:auto;
+}
+
+.people_pic{
+    width: 80px;
+    height:auto;
+}
+
+label.error {
+    color:#FF0000;
+}

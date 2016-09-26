@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Search People";
+}
+
+<h3>Search People</h3>
+<br />
+<a href="#" id="create_pereson">Create New</a>
+<br />
+<br />
+
+<div class="form-inline well well-sm">
+    <span>Person Name (Like):</span>
+    <input type="text" name="person_name" placeholder="e.g., John,Doe" title="e.g, John,Doe" id="person_name" style="width: 180px" class="form-control" />
+    <input type="submit" value="Search(S)" accesskey="S" class="btn btn-default" id="do_search" />
+    <span>Simmulate network delay in seconds</span>
+    <select id="delay" name="delay" class="form-control">
+        <option selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+</div>
+
+<div id="the_data">
+    @Html.Partial("_PeopleData")
+</div>
+
+<div>
+    @Html.Partial("_CreatePerson")
+</div>
+
+<div id="gears_of_wait" style="position:absolute;display:none;z-index:2000">
+    <img src="~/images/gears_of_wait.gif" id="gears_img"></div>

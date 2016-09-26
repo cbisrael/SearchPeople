@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="people_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="person">
+          <Key>
+            <PropertyRef Name="iperson" />
+          </Key>
+          <Property Name="iperson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="first_name" Type="nchar" MaxLength="80" />
+          <Property Name="last_name" Type="nchar" MaxLength="80" />
+          <Property Name="sort_name" Type="nchar" MaxLength="160" />
+          <Property Name="address" Type="nchar" MaxLength="200" />
+          <Property Name="city" Type="nchar" MaxLength="80" />
+          <Property Name="zip" Type="nchar" MaxLength="10" />
+          <Property Name="state" Type="nchar" MaxLength="10" />
+          <Property Name="age" Type="int" />
+          <Property Name="interests" Type="text" />
+          <Property Name="pic_path" Type="nchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="people_dbModelStoreContainer">
+          <EntitySet Name="person" EntityType="Self.person" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="people_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="people_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="people" EntityType="people_dbModel.person" />
+        </EntityContainer>
+        <EntityType Name="person">
+          <Key>
+            <PropertyRef Name="iperson" />
+          </Key>
+          <Property Name="iperson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="first_name" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="last_name" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="sort_name" Type="String" MaxLength="160" FixedLength="true" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
+          <Property Name="zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="interests" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="pic_path" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="people_dbModelStoreContainer" CdmEntityContainer="people_dbEntities">
+          <EntitySetMapping Name="people">
+            <EntityTypeMapping TypeName="people_dbModel.person">
+              <MappingFragment StoreEntitySet="person">
+                <ScalarProperty Name="pic_path" ColumnName="pic_path" />
+                <ScalarProperty Name="interests" ColumnName="interests" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="sort_name" ColumnName="sort_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="iperson" ColumnName="iperson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
