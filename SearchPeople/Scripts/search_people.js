@@ -149,7 +149,7 @@ function output_person_records(data)
             var _html = "<tr><td style='vertical-align: middle'>" + get_pic(data[index].pic_path) + "</td>" +
                 "<td style='vertical-align: middle'>" + trim_data(data[index].first_name) + "</td>" +
                 "<td style='vertical-align: middle'>" + trim_data(data[index].last_name) + "</td>" +
-                "<td style='vertical-align: middle'>" + trim_data(data[index].address) + "<br/>" + trim_data(data[index].city) +
+                "<td style='vertical-align: middle'>" + trim_data(data[index].address) + "<br/>" + trim_data(data[index].city) + " " +
                 trim_data(data[index].state) + ", " + trim_data(data[index].zip) + "</td>" +
                 "<td style='vertical-align: middle'>" + (data[index].age == null ? "" : data[index].age) + "</td>" +
                 "<td style='vertical-align: middle'>" + trim_data(data[index].interests) +
